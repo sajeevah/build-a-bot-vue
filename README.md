@@ -33,5 +33,10 @@ Vue
 npm install node-sass sass-loader --save-dev
 ```
 
+### For router support
+```
+npm install vue-router --save
+```
+
 ### help file urls
 https://github.com/jmcooper/vuejs-fundamentals
