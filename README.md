@@ -28,6 +28,10 @@ ESLint
 Vetur
 Vue
 
+### For SCSS support
+```
+npm install node-sass sass-loader --save-dev
+```
 
 ### help file urls
 https://github.com/jmcooper/vuejs-fundamentals
