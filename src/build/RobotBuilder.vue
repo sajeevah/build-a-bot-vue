@@ -50,23 +50,6 @@
         position="bottom"
         @partSelected="part => selectedRobot.base = part"/>
     </div>
-    <div>
-      <h1>Robot</h1>
-      <table>
-        <thead>
-          <tr>
-            <th>Robot</th>
-            <th class="cost">Cost</th>
-          </tr>
-        </thead>
-        <tbody>
-          <tr v-for="(robot, index) in cart" :key="index">
-            <td>{{robot.head.title}}</td>
-            <td>{{robot.cost}}</td>
-          </tr>
-        </tbody>
-      </table>
-    </div>
   </div>
 </template>
 
@@ -123,7 +106,7 @@ export default {
         + robot.rightArm.cost
         + robot.base.cost;
       // eslint-disable-next-line prefer-object-spread
-      this.cart.push(Object.assign({}, robot, { cost }));
+      this.$store.commit('addRobotToCart', Object.assign({}, robot, { cost }));
       this.addedToCart = true;
     },
   },
@@ -236,14 +219,6 @@ export default {
   width: 210px;
   padding: 3px;
   font-size: 16px;
-}
-td, th {
-  text-align: left;
-  padding: 5px;
-  padding-right: 20px;
-}
-.cost {
-  text-align: right;
 }
 .sale-border {
   border: 3px solid red;
