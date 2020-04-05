@@ -43,5 +43,10 @@ npm install vue-router --save
 npm install vuex --save
 ```
 
+### For AXIOS support
+```
+npm install axios --save
+```
+
 ### help file urls
 https://github.com/jmcooper/vuejs-fundamentals
